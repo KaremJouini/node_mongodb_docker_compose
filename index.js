@@ -8,9 +8,7 @@ const PORT = 5051 | process.env.PORT;
 const environment = require("./environment");
 app.listen(PORT, () => {
     console.log("Server Listening on", PORT, "...");
-    let mongoURI="mongodb://"+environment.MONGO_USERNAME+":" 
-    +environment.MONGO_PASSWORD+ "@"
-    + environment.MONGO_HOSTNAME + 
+    let mongoURI="mongodb://"+ environment.MONGO_HOSTNAME + 
     ":" + environment.MONGO_PORT +
      "/" + environment.MONGO_DB;
     console.log(mongoURI);
